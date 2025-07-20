@@ -1,0 +1,113 @@
+body {
+  background: #fff0f5;
+  font-family: 'Press Start 2P', cursive;
+  color: #ff69b4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 80px 15px 40px;
+}
+
+.section {
+  padding: 80px 15px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 20px;
+  animation: pulse 2s infinite;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  color: #ff69b4;
+  animation: float 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-600px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 💡 Mobile Optimizations */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 11px;
+  }
+
+  .heart {
+    font-size: 16px;
+  }
+}
+#revealButton {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+  transition: transform 0.2s ease;
+}
+
+#revealButton:hover {
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+#surpriseMessage {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ff1493;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
